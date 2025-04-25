@@ -88,3 +88,25 @@ document.getElementById('add-water-button').addEventListener('click', function()
     const newHeight = Math.min((currentIntake / maxIntake) * bottleHeight, bottleHeight);
     waterElement.style.height = newHeight + 'px';
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleCheckbox = document.getElementById("theme-toggle");
+    const body = document.body;
+
+    // Set initial theme based on local storage or default to light mode
+    const savedTheme = localStorage.getItem("theme") || "light-mode";
+    body.classList.add(savedTheme);
+    toggleCheckbox.checked = savedTheme === "dark-mode";
+
+    toggleCheckbox.addEventListener("change", () => {
+        if (toggleCheckbox.checked) {
+            body.classList.remove("light-mode");
+            body.classList.add("dark-mode");
+            localStorage.setItem("theme", "dark-mode");
+        } else {
+            body.classList.remove("dark-mode");
+            body.classList.add("light-mode");
+            localStorage.setItem("theme", "light-mode");
+        }
+    });
+});

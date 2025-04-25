@@ -8,9 +8,16 @@
     <link rel="manifest" href="manifest.json">
 </head>
 <body>
+    <!-- Light/Dark Mode Toggle -->
+    <div class="toggle-container">
+        <input type="checkbox" id="theme-toggle" class="toggle-checkbox" />
+        <label for="theme-toggle" class="toggle-label">
+            <div class="toggle-ball"></div>
+        </label>
+    </div>
     <div class="container">
         <div class="hydration-widget">
-            <h1>Hydration Tracker</h1>
+            <h1 id="app-title">Hydration Tracker</h1>
             <div class="bottle-container" id="bottle-container">
                 <div class="bottle">
                     <div class="water" id="water"></div>
@@ -28,24 +35,6 @@
                 <h2>Session Reset</h2>
                 <p>Your session has been successfully reset.</p>
                 <button id="confirm-reset">OK</button>
-            </div>
-        </div>
-        <div class="login-container hidden" id="login-container">
-            <h1>Restricted Content</h1>
-            <p>Jesus loves you.</p>
-            <div class="restricted-content-section">
-                <h2>Daily Manna</h2>
-                <ul>
-                    <li>Jesus gives you amazing life.</li>
-                    <li>Unlike other religions</li>
-                    <li>Deets</li>
-                    <li>John 3:16</li>
-                </ul>
-            </div>
-            <div class="restricted-content-section">
-                <h2>Give your life to Jesus today</h2>
-                <p>W</p>
-                <p>Read the bible!</p>
             </div>
         </div>
         <div id="login-icon" class="login-icon" title="Long press to reset session"></div>
